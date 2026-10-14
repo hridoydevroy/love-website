@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#120716">
+<title>For Pakhi ❤️</title>
+<style>
+:root{--pink:#ff72b6;--hot:#ff2e83;--cream:#fff2fa}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{min-height:100vh;overflow-x:hidden;color:var(--cream);background:radial-gradient(ellipse at 50% 20%,#451333 0%,#1b0a24 42%,#090812 100%);display:grid;place-items:center;padding:24px}
+#stars,#floaties{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;animation:twinkle 2.2s ease-in-out infinite alternate}
+.wrap{position:relative;z-index:1;width:min(100%,720px);text-align:center;padding:clamp(24px,6vw,54px) clamp(18px,5vw,48px);border:1px solid #ff9bc544;border-radius:30px;background:linear-gradient(145deg,#ffffff0d,#ff4d9910);box-shadow:0 25px 90px #0007,0 0 50px #ff2e8315;backdrop-filter:blur(10px);animation:rise 1s ease both}
+.eyebrow{font:600 11px/1.5 Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;color:#ffafd5}
+h1{font-size:clamp(42px,9vw,82px);line-height:1.02;margin:18px 0 8px;letter-spacing:-2px;text-shadow:0 0 24px #ff2e8370}
+h1 span{display:block;color:#ff8ec6;font-style:italic}
+.subtitle{font:14px/1.8 Arial,sans-serif;color:#eacddd;max-width:470px;margin:18px auto 28px}
+.envelope-area{height:200px;display:grid;place-items:center;perspective:900px}
+.envelope{position:relative;width:min(270px,75vw);height:155px;border:0;background:transparent;cursor:pointer;filter:drop-shadow(0 15px 24px #ff2e8330);transition:transform .3s}
+.envelope:hover{transform:translateY(-5px)}
+.env-back{position:absolute;inset:18px 0 0;background:#a72b69;border-radius:9px}
+.letter{position:absolute;left:10%;top:22px;width:80%;height:110px;border-radius:5px;background:linear-gradient(#fff8fc,#ffd8e9);color:#9e235e;display:flex;align-items:center;justify-content:center;flex-direction:column;font:14px/1.4 Arial,sans-serif;transition:transform .9s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 12px #0002}
+.letter strong{font:italic 23px Georgia,serif;margin-top:5px}
+.env-front{position:absolute;inset:18px 0 0;border-radius:0 0 9px 9px;background:linear-gradient(145deg,#ff76b8,#d52c79);clip-path:polygon(0 0,50% 63%,100% 0,100% 100%,0 100%)}
+.flap{position:absolute;inset:18px 0 auto;height:92px;background:linear-gradient(145deg,#ff9ccc,#e83c89);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .65s;z-index:3}
+.seal{position:absolute;z-index:4;left:50%;top:77px;transform:translateX(-50%);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#a91154;border:1px solid #ffb8d9;box-shadow:0 0 20px #ff6eae;color:#fff;font:20px Arial,sans-serif;transition:opacity .2s}
+.envelope.open .flap{transform:rotateX(180deg);z-index:0}
+.envelope.open .letter{transform:translateY(-76px);transition-delay:.25s}
+.envelope.open .seal{opacity:0}
+.hint{font:12px Arial,sans-serif;letter-spacing:1px;color:#ffc3df;margin-top:-3px}
+.message{display:none;max-width:510px;margin:12px auto 0;animation:rise .8s ease both}
+.message.show{display:block}
+.message p{font:15px/1.9 Arial,sans-serif;color:#f9dce9}
+.message .signature{font:italic 23px Georgia,serif;color:#ff8ec6}
+button.action{margin-top:12px;border:1px solid #ffb3d5aa;border-radius:999px;padding:13px 21px;color:#fff;background:linear-gradient(100deg,#ff4d9b,#b52370);font:600 13px Arial,sans-serif;letter-spacing:.4px;cursor:pointer;box-shadow:0 8px 28px #ff2e8330;transition:transform .2s}
+button.action:hover{transform:translateY(-2px);box-shadow:0 10px 32px #ff2e8350}
+.foot{margin-top:30px;font:10px Arial,sans-serif;letter-spacing:3px;color:#bd91ad}
+.float{position:absolute;bottom:-40px;animation:floatUp linear forwards;opacity:0}
+@keyframes twinkle{from{opacity:.15;transform:scale(.7)}to{opacity:.95;transform:scale(1.4)}}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}12%{opacity:.85}100%{transform:translateY(-115vh) rotate(35deg) scale(1.25);opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:420px){body{padding:12px}.wrap{border-radius:22px}.envelope-area{height:180px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div id="stars"></div><div id="floaties"></div>
+<main class="wrap">
+  <div class="eyebrow">A little surprise, made with love</div>
+  <h1>I Love You <span>Pakhi ❤️</span></h1>
+  <p class="subtitle">Some feelings are too special for ordinary words.<br>There is a little letter waiting just for you.</p>
+  <div class="envelope-area">
+    <button class="envelope" id="envelope" aria-label="Open the love letter">
+      <span class="env-back"></span>
+      <span class="letter">A little note for you <strong>Dear Pakhi</strong> 💗</span>
+      <span class="env-front"></span><span class="flap"></span><span class="seal">♥</span>
+    </button>
+  </div>
+  <div class="hint" id="hint">TAP THE ENVELOPE TO OPEN 💌</div>
+  <section class="message" id="message" aria-live="polite">
+    <p>পাখি, তোমার জন্য ছোট্ট একটা বার্তা—তুমি সবসময় হাসিখুশি থেকো, তোমার প্রতিটি দিন সুন্দর হোক, আর তোমার স্বপ্নগুলো একে একে পূরণ হোক। তোমার জন্য রইল অনেক ভালোবাসা আর একরাশ শুভকামনা। 💖</p>
+    <div class="signature">Always wishing you happiness ✨</div>
+    <button class="action" id="again">Read it again 💌</button>
+  </section>
+  <div class="foot">MADE WITH ♡ JUST FOR YOU</div>
+</main>
+<script>
+const stars=document.getElementById('stars'),floaties=document.getElementById('floaties');
+for(let i=0;i<100;i++){const s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*3+'s';s.style.animationDuration=(1.4+Math.random()*2.8)+'s';stars.appendChild(s)}
+function heart(){const h=document.createElement('span');h.className='float';h.textContent=['♥','♡','💗','✦'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=(14+Math.random()*24)+'px';h.style.color=['#ff72b6','#ffb3d5','#fff0f8'][Math.floor(Math.random()*3)];h.style.animationDuration=(5+Math.random()*5)+'s';floaties.appendChild(h);setTimeout(()=>h.remove(),10500)}
+setInterval(heart,500);
+const envelope=document.getElementById('envelope'),message=document.getElementById('message'),hint=document.getElementById('hint');
+function openLetter(){envelope.classList.add('open');message.classList.add('show');hint.textContent='A LITTLE NOTE, JUST FOR YOU ✨';for(let i=0;i<22;i++)setTimeout(heart,i*75)}
+envelope.addEventListener('click',openLetter);
+document.getElementById('again').addEventListener('click',()=>{envelope.classList.remove('open');message.classList.remove('show');hint.textContent='TAP THE ENVELOPE TO OPEN 💌';window.scrollTo({top:0,behavior:'smooth'})});
+</script>
+</body>
+</html>
