@@ -43,6 +43,47 @@ button.action:hover{transform:translateY(-2px);box-shadow:0 10px 32px #ff2e8350}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:420px){body{padding:12px}.wrap{border-radius:22px}.envelope-area{height:180px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  
+/* Romantic moving animation */
+.wrap {
+  animation: rise 1s ease both, floatCard 5s ease-in-out infinite;
+}
+
+h1 {
+  animation: textGlow 2s ease-in-out infinite alternate,
+             textMove 4s ease-in-out infinite;
+}
+
+.envelope {
+  animation: envelopeMove 5s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px #ff2e83;
+    color: #fff2fa;
+  }
+  to {
+    text-shadow: 0 0 30px #ff2e83, 0 0 50px #ff72b6;
+    color: #ff8ec6;
+  }
+}
+
+@keyframes textMove {
+  0%, 100% { rotate: -2deg; }
+  50% { rotate: 2deg; }
+}
+
+@keyframes envelopeMove {
+  0%, 100% { rotate: -5deg; }
+  50% { rotate: 5deg; }
+}
+
 </style>
 </head>
 <body>
